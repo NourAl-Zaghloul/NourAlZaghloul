@@ -20,3 +20,69 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+.Main {
+    --primary-color: var(--a-color);
+}
+
+.Resume {
+    --primary-color: var(--a-color);
+}
+
+.Projects {
+    --primary-color: var(--a-color);
+}
+
+.Contact {
+    --primary-color: var(--a-color);
+}
+
+#header {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 3px;
+    grid-row-gap: 0px;
+    grid-template-areas:
+      "Main Main Resume Projects Contact";
+    padding: 6px;
+    border-bottom: var(--black-color) double 3px;
+    text-align: center;
+}
+
+.headerDiv {
+    border:black solid 3px;
+    padding: 6px;
+    background-color: var(--primary-color);
+    transition: all ease-in 200ms;
+}
+
+.headerDiv_selected {
+    font-size: xx-large;
+}
+
+#headerMain {
+    grid-area: Main;
+}
+#headerResume {
+    grid-area: Resume;
+}
+#headerProjects {
+    grid-area: Projects;
+}
+#headerContact {
+    grid-area: Contact;
+}
+
+
+#main {
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+}
+
+#footer {
+    display: flex;
+    padding: 6px;
+    border-top: var(--black-color) double 3px;
+}
