@@ -120,3 +120,7 @@ div#footer {
 h1, h2 {
 	text-align: center;
 }
+
+div.innerpage {
+	padding: 1.2%;
+}
