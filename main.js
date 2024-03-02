@@ -1,19 +1,41 @@
-function selectButton(button){
+function setActive(location){
+    switch(location){
+        case "About":
+            document.getElementById("tabs").style.gridTemplateColumns = "1.5fr 1fr 1fr";  
 
-    //unselect button
-    let unselectedButton = document.querySelector(`#header > button.selected`);
-    unselectedButton.classList.toggle("selected");
+            document.getElementById("CVResume").classList.remove("active");
+            document.getElementById("buttonResume").classList.remove("active");
+            document.getElementById("ContactMe").classList.remove("active");
+            document.getElementById("buttonContact").classList.remove("active");
 
-    //select button
-    let selectedButton = document.querySelector(`#header > button.${button}`);
-    selectedButton.classList.toggle("selected");
 
-    // change divs + background color
-    let bodyDiv = document.getElementById('body');
-    let oldDiv = document.getElementById(bodyDiv.className);
-    let newDiv = document.getElementById(button);
+            document.getElementById("AboutNour").classList.add("active");
+            document.getElementById("buttonAbout").classList.add("active");
+            break;
+        case "Resume":
+            document.getElementById("tabs").style.gridTemplateColumns = "1fr 1.5fr 1fr";  
 
-    oldDiv.hidden = true;
-    newDiv.hidden = false;
-    bodyDiv.className = button;
+            document.getElementById("ContactMe").classList.remove("active");
+            document.getElementById("buttonContact").classList.remove("active");
+            document.getElementById("AboutNour").classList.remove("active");
+            document.getElementById("buttonAbout").classList.remove("active");
+
+
+            document.getElementById("CVResume").classList.add("active");
+            document.getElementById("buttonResume").classList.add("active");
+            break;
+        case "Contact":
+            document.getElementById("tabs").style.gridTemplateColumns = "1fr 1fr 1.5fr";  
+
+            document.getElementById("CVResume").classList.remove("active");
+            document.getElementById("buttonResume").classList.remove("active");
+            document.getElementById("AboutNour").classList.remove("active");
+            document.getElementById("buttonAbout").classList.remove("active");
+
+
+            document.getElementById("ContactMe").classList.add("active");
+            document.getElementById("buttonContact").classList.add("active");
+            break;
+    }
+
 }

@@ -5,38 +5,34 @@
 	<meta name='viewport' content='width=device-width,initial-scale=1'>
 	<title>Nour al-Zaghloul</title>
 	<link rel='stylesheet' href='global.css'>
-	<script src="main.js" deferS></script>
+	<script src="main.js"></script>
 </head>
 <body>
-	
-	<div id="header">
-		<h1>Nour al-Zaghloul</h1>
-		<br>
-		<button class="about selected" onclick="selectButton('about')">About</button>
-		<button class="resume" onclick="selectButton('resume')">Resume</button>
-		<!--<button>Projects</button>-->
-		<button class="contact" onclick="selectButton('contact')">Contact</button>
-	</div>
-	<div id="body" class="about">
-		<div id="about" class="innerpage">
+	<header><h1>Nour al-Zaghloul</h1></header>
+	<nav id="tabs">
+		<a href="#AboutNour"><button class="active" onclick="setActive('About')" id="buttonAbout">About Nour</button></a>
+		<a href="#CVResume"><button onclick="setActive('Resume')" id="buttonResume">CV & Resume</button></a>
+		<a href="#ContactMe"><button onclick="setActive('Contact')" id="buttonContact">Contact Me</button></a>
+	</nav>
+	<div id="content">
+		<div class="page active" id="AboutNour">
 			<h2>About Nour</h2>
-			<p>Hello!</p>
 			<p>I'm Nour al-Zaghloul (thus the webpage).</p>
 		</div>
-		<div id="resume" class="innerpage" hidden>
-			<h2>My Resumes</h2>
-			<div id="resumeSidebar"></div>
-			<div id="resumeMainBar"></div>
+		<div class="page" id="CVResume">
+			<h2>CV & Resume</h2>
+			<p>On the left (below on mobile) you'll see multiple resumes to choose from, I recommend the default option unless you have a specific job in mind. If you want a brief overview continue reading and I'll go over that now.</p>
 		</div>
-		<div id="contact" class="innerpage" hidden>
-			<h2>Contact Info</h2>
-			<p>I'm going to be blunt, if you want to contact me professionally please only do so through my email: <a href="mailto:nouralzaghloul@gmail.com">nouralzaghloul@gmail.com</a></p>
-			<p>If you want to look at my personal work you can find me all over the place, though I rarely use social media. The best place to keep track of my various personal projects is through this website (when they're nicely put together), <a href="pigeonworkshop.com">pigeonworkshop.com</a> (when they're done but not polished or necessarily professional), or <a href="nourthepigeon.com">nourthepigeon.com</a> (when you want work in progresses and random blog posts).</p>				
+		<div class="page" id="ContactMe">
+			<h2>Contact Me</h2>
+			<p>I'm going to be blunt, if you want to contact me professionally please only do so through my email: nouralzaghloul@gmail.com</p>
+			<br>
+			<p>If you want to look at my personal work you can find me all over the place, though I rarely use social media. The best place to keep track of my various personal projects is through this website (when they're nicely put together), pigeonworkshop.com (when they're done but not polished or necessarily professional), or nourthepigeon.com (when you want work in progresses and random blog posts).</p>
+			<br>
 			<p>Thank you for your interest though! Very flattered.</p>
 		</div>
 	</div>
-	<div id="footer">
-		<p>This is a footer. Things go here, but honestly I have none of that. Look at you though, very inquisitive! That's a good quality to have.</p>
-	</div>
+	<br>
+	<footer>This is a footer. Things go here, but honestly I have none of that. Look at you though, very inquisitive! That's a good quality to have.</footer>
 </body>
 </html>
