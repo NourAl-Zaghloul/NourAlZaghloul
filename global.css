@@ -9,12 +9,36 @@
 	--accent-color-dark: hsl(210 100 16.5);
 }
 
+@font-face {
+	font-family: 'Atkinson Hyperlegible';
+	src: url('PigeonFont/AtkinsonHyperlegible-Regular.ttf') format('tff');
+  }
+  
+  @font-face {
+	font-family: 'Atkinson Hyperlegible';
+	src: url('PigeonFont/AtkinsonHyperlegible-Bold.ttf') format('tff');
+	font-weight: 700;
+  }
+  
+  @font-face {
+	font-family: 'Atkinson Hyperlegible';
+	src: url('PigeonFont/AtkinsonHyperlegible-Italic.ttf') format('tff');
+	font-style: italic;
+  }
+  
+  @font-face {
+	font-family: 'Atkinson Hyperlegible';
+	src: url('PigeonFont/AtkinsonHyperlegible-BoldItalic.ttf') format('tff');
+	font-weight: 700;
+	font-style: italic;
+  }
+
 * {
 	box-sizing: border-box;
 }
 
 body {
-	font-family: "Open Sans";
+	font-family: "Atkinson Hyperlegible";
 	background: var(--reference-dark);
 	color: var(--reference-light);
 	display: flex;
@@ -39,15 +63,14 @@ button {
 	border-color: var(--reference-dark);
 	color: var(--reference-dark);
 	width: 100%;
-	min-height: 5em;
+	min-height: 4em;
 	border-width: .05em;
 	padding: 0;
 	border-style: solid;
 }
 
 button.active {
-	width: 2fr;
-	min-height: 5.1em;
+	min-height: 4.1em;
 	background-color: var(--main-color);
 	position: relative;
 	border-color: var(--main-color);
