@@ -56,9 +56,20 @@ nav#tabs {
 	transition: grid-template-columns .2s ease-in
 }
 
+h1 {
+	font-size: xx-large;
+}
+
+h2 {
+	font-size: x-large;
+}
+
+p, ul, li {
+	font-size: large;
+}
 
 button {
-	font-size: large;
+	font-size: larger;
 	background-color: var(--main-color-light);
 	border-color: var(--reference-dark);
 	color: var(--reference-dark);
@@ -94,5 +105,6 @@ button.active {
 }
 
 footer {
-	width: 90%
+	width: 90%;
+	color: var(--reference-dark)
 }
