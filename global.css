@@ -108,3 +108,7 @@ footer {
 	width: 90%;
 	color: var(--reference-dark)
 }
+
+#ResumeLink {
+	width: 10%;
+}
